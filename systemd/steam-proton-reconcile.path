@@ -1,0 +1,11 @@
+[Unit]
+Description=Watch for Steam and Heroic Proton compatibility tool changes
+PartOf=graphical-session.target
+
+[Path]
+PathModified=%h/.local/share/Steam/compatibilitytools.d
+PathModified=%h/.config/heroic/tools/proton
+Unit=steam-proton-reconcile.service
+
+[Install]
+WantedBy=graphical-session.target
